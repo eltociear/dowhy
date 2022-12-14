@@ -193,6 +193,7 @@ def bar_plot(
     :param xticks: Explicitly specify the labels for the bars on the x-axis.
     :param xticks_rotation: Specify the rotation of the labels on the x-axis.
     """
+    values = {k: values[k] for k in sorted(values)}
     if uncertainties is None:
         uncertainties = {node: [values[node], values[node]] for node in values}
 
